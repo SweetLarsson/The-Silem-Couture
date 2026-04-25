@@ -6,6 +6,9 @@ export default function Tutorials() {
     "https://www.youtube.com/embed/3XHVFw5Kqnw",
     "https://www.youtube.com/embed/w2SIQoY9YB4",
     "https://www.youtube.com/embed/gFdiSyaXLtY",
+    "https://www.youtube.com/embed/S9na7fQlrGU",
+    "https://www.youtube.com/embed/RrOGqchHZPE",
+    "https://www.youtube.com/embed/1K_fdKJKKk0",
   ];
 
   const whatsappMessage = encodeURIComponent("Hello! I would like to make a Tutorial Request.");

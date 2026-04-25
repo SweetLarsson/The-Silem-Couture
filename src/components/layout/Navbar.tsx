@@ -73,7 +73,7 @@ export function Navbar() {
                 to={link.path}
                 className={cn(
                   "text-sm font-medium uppercase tracking-wider hover:text-peach-500 transition-colors",
-                  textColorClass
+                  location.pathname === link.path ? "text-peach-500" : textColorClass
                 )}
               >
                 {link.name}

@@ -3,12 +3,9 @@ import { PageTransition } from '@/components/ui/PageTransition';
 
 export default function Bridals() {
   const images = [
-    'https://i.imgur.com/xsW9m87.jpeg',
-    'https://i.imgur.com/gjeALsw.jpeg',
-    'https://i.imgur.com/nGxZ2Wg.jpeg',
-    'https://i.imgur.com/1nwJ6De.jpeg',
-    'https://i.imgur.com/RFBCOZP.jpeg',
-    'https://i.imgur.com/FHXTQf0.jpeg'
+    'https://i.imgur.com/DZejhKa.jpeg',
+    'https://i.imgur.com/esqLmo0.jpeg',
+    'https://i.imgur.com/0MKiqY2.jpeg'
   ];
 
   const whatsappMessage = encodeURIComponent("Hello! I would like to order a Custom Made Wedding Dress.");

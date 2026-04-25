@@ -127,7 +127,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pb-16 md:pb-24"
           >
-            <Link to="/shop" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-medium uppercase tracking-wider hover:bg-peach-200 transition-colors rounded-full">
+            <Link to="/gallery" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-medium uppercase tracking-wider hover:bg-peach-200 transition-colors rounded-full">
               {t('hero.shop')}
             </Link>
             <Link to="/courses" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white font-medium uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded-full">
@@ -178,10 +178,10 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.featured_collection')}</h2>
               <div className="w-24 h-1 bg-peach-500 rounded-full" />
             </div>
-            <Link to="/shop" className="hidden md:flex items-center space-x-2 text-sm font-bold uppercase tracking-wider hover:text-peach-500 transition-colors">
+            <div className="hidden md:flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-gray-400 cursor-not-allowed">
               <span>{t('home.view_all')}</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -204,11 +204,11 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="mt-8 text-center md:hidden">
-            <Link to="/shop" className="inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-wider hover:text-peach-500 transition-colors">
+          <div className="mt-8 text-center md:hidden text-gray-400 cursor-not-allowed">
+            <span className="inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-wider">
               <span>{t('home.view_all_collection')}</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </span>
           </div>
         </div>
       </section>
@@ -256,7 +256,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
               <iframe 
                 className="w-full h-full" 
@@ -335,8 +335,8 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="py-24 bg-peach-100 dark:bg-gray-900">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
+        <div className="mx-auto">
+          <div className="text-center mb-16 px-4 md:px-8">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.client_voices')}</h2>
             <div className="w-24 h-1 bg-peach-500 mx-auto rounded-full" />
           </div>
@@ -345,7 +345,7 @@ export default function Home() {
             <div className="transition-transform duration-500 ease-out group-hover:scale-105">
               <div className="flex w-max animate-marquee">
                 {[...Array(2)].map((_, arrayIndex) => (
-                  <div key={arrayIndex} className="flex gap-8 pr-8">
+                  <div key={arrayIndex} className="flex gap-8 px-4">
                     {TESTIMONIALS.map((testimonial, index) => (
                       <div
                         key={index}

@@ -3,12 +3,15 @@ import { PageTransition } from '@/components/ui/PageTransition';
 
 export default function Bespoke() {
   const images = [
-    'https://i.imgur.com/FC145Zc.jpeg',
-    'https://i.imgur.com/DBjXsBz.jpeg',
-    'https://i.imgur.com/yb2cNBy.jpeg',
-    'https://i.imgur.com/fK1nZUz.jpeg',
-    'https://i.imgur.com/vvISSuZ.jpeg',
-    'https://i.imgur.com/ltPPO0e.jpeg'
+    'https://i.imgur.com/NUnjDqI.jpeg',
+    'https://i.imgur.com/jpBn3DW.jpeg',
+    'https://i.imgur.com/tpj5DhY.jpeg',
+    'https://i.imgur.com/mL7GS8D.jpeg',
+    'https://i.imgur.com/MFUrU5T.jpeg',
+    'https://i.imgur.com/VvabSjD.jpeg',
+    'https://i.imgur.com/EbVtobn.jpeg',
+    'https://i.imgur.com/YUI55fU.jpeg',
+    'https://i.imgur.com/nBZdrwX.jpeg'
   ];
 
   const whatsappMessage = encodeURIComponent("Hello! I would like to order a bespoke outfit.");

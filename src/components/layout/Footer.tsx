@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & Contact */}
           <div className="space-y-6">
-            <Link to="/" className="inline-block -ml-4 md:-ml-8 -mt-4 mb-2 block">
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="inline-block -ml-4 md:-ml-8 -mt-4 mb-2 block">
               <img 
                 src="https://i.imgur.com/qa5gS0Z.png" 
                 alt="The Silem Couture" 
@@ -25,7 +25,7 @@ export function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4" />
-                <span>+234 806 090 1607</span>
+                <a href="tel:+2348060901607" className="hover:text-peach-400 transition-colors">+234 806 090 1607</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4" />
@@ -38,7 +38,8 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-6">{t('footer.quick_links')}</h3>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><Link to="/shop" className="hover:text-peach-400 transition-colors">{t('nav.shop')}</Link></li>
+              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-peach-400 transition-colors">Home</button></li>
+              <li><Link to="/services" className="hover:text-peach-400 transition-colors">Services</Link></li>
               <li><Link to="/courses" className="hover:text-peach-400 transition-colors">{t('nav.courses')}</Link></li>
               <li><Link to="/gallery" className="hover:text-peach-400 transition-colors">{t('nav.gallery')}</Link></li>
               <li><Link to="/about" className="hover:text-peach-400 transition-colors">{t('nav.about')}</Link></li>
@@ -49,10 +50,10 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-6">{t('footer.customer_care')}</h3>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><Link to="/contact" className="hover:text-peach-400 transition-colors">Contact Us</Link></li>
-              <li><Link to="/shipping" className="hover:text-peach-400 transition-colors">Shipping & Returns</Link></li>
-              <li><Link to="/size-guide" className="hover:text-peach-400 transition-colors">Size Guide</Link></li>
-              <li><Link to="/faq" className="hover:text-peach-400 transition-colors">FAQ</Link></li>
+              <li><a href="tel:+2348060901607" className="hover:text-peach-400 transition-colors">Contact Us</a></li>
+              <li><a href="mailto:silem.couture@gmail.com" className="hover:text-peach-400 transition-colors">Shipping & Returns</a></li>
+              <li><a href="mailto:silem.couture@gmail.com" className="hover:text-peach-400 transition-colors">Size Guide</a></li>
+              <li><span className="hover:text-peach-400 transition-colors cursor-default">FAQ</span></li>
             </ul>
           </div>
 

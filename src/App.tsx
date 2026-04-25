@@ -6,7 +6,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import Home from './pages/Home';
-import Shop from './pages/Shop';
 import Courses from './pages/Courses';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
@@ -26,7 +25,6 @@ export default function App() {
         {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="shop" element={<Shop />} />
           <Route path="courses" element={<Courses />} />
           <Route path="services" element={<Services />} />
           <Route path="gallery" element={<Gallery />} />

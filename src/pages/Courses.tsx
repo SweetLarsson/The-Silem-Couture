@@ -221,10 +221,24 @@ export default function Courses() {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[ 
-              'https://i.imgur.com/gjeALsw.jpeg', 
-              'https://i.imgur.com/vvISSuZ.jpeg',
-              'https://i.imgur.com/DBjXsBz.jpeg',
-              'https://i.imgur.com/FC145Zc.jpeg' 
+              'https://i.imgur.com/AlbjtGg.jpeg',
+              'https://i.imgur.com/NJMhJ76.jpeg',
+              'https://i.imgur.com/sIMTrIY.jpeg',
+              'https://i.imgur.com/gZn4lpT.jpeg',
+              'https://i.imgur.com/8iU5Qcx.jpeg',
+              'https://i.imgur.com/ygoR7XY.jpeg',
+              'https://i.imgur.com/r1ZE2Qc.jpeg',
+              'https://i.imgur.com/qOs4ICT.jpeg',
+              'https://i.imgur.com/htozf6G.jpeg',
+              'https://i.imgur.com/Lo5wOWO.jpeg',
+              'https://i.imgur.com/ZLYo70b.jpeg',
+              'https://i.imgur.com/p9JTOuz.jpeg',
+              'https://i.imgur.com/rsq88Ys.jpeg',
+              'https://i.imgur.com/ZSyZEJV.jpeg',
+              'https://i.imgur.com/1UmegXn.jpeg',
+              'https://i.imgur.com/ceY789f.jpeg',
+              'https://i.imgur.com/jLCb8fL.jpeg',
+              'https://i.imgur.com/gPG9Yzh.jpeg'
             ].map((src, idx) => (
               <motion.div
                 key={idx}
