@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-peach-100: #efdbe0;
+  --color-peach-200: #dec0c6;
+  --color-peach-300: #caa1a8;
+  --color-peach-400: #b5858d;
+  --color-peach-500: #a06e76;
+  --color-peach-600: #87555e;
+  --color-peach-700: #6e4148;
+  --color-peach-800: #542e34;
+  --color-peach-900: #3b1c21;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+  }
+
+  body {
+    @apply bg-white text-black font-sans antialiased selection:bg-peach-200 selection:text-black;
+  }
+
+  .dark body {
+    @apply bg-black text-white selection:bg-peach-700 selection:text-white;
+  }
+
+  img:not(.no-fx):not(.no-filter) {
+    @apply rounded-[2rem] transition-all duration-700 ease-out;
+  }
+
+  /* Target wrappers or images directly so the scale swell and reveal trigger smoothly */
+  .group:hover img:not(.no-fx):not(.no-filter),
+  img:not(.no-fx):not(.no-filter):hover {
+    @apply scale-105 rounded-[2rem];
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+/* Hide Scrollbar */
+html, body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
