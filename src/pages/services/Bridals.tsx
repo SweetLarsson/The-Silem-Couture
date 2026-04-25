@@ -49,7 +49,7 @@ export default function Bridals() {
 
           <div className="text-center">
              <a 
-               href={`https://wa.me/2348060901607?text=${whatsappMessage}`} 
+               href={`https://wa.me/message/TE4G3XZ3KAOMM1`} 
                target="_blank" 
                rel="noopener noreferrer"
                className="inline-block px-12 py-5 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wider hover:bg-peach-500 dark:hover:bg-peach-500 hover:text-white transition-all transform hover:-translate-y-1 rounded-full text-sm shadow-xl"

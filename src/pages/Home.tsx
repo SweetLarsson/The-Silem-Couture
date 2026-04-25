@@ -257,31 +257,61 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden">
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
               <iframe 
                 className="w-full h-full" 
                 src="https://www.youtube.com/embed/3XHVFw5Kqnw" 
-                title="YouTube video player" 
+                title="YouTube video player 1" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden">
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
               <iframe 
                 className="w-full h-full" 
                 src="https://www.youtube.com/embed/w2SIQoY9YB4" 
-                title="YouTube video player" 
+                title="YouTube video player 2" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden">
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
               <iframe 
                 className="w-full h-full" 
                 src="https://www.youtube.com/embed/gFdiSyaXLtY" 
-                title="YouTube video player" 
+                title="YouTube video player 3" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+              <iframe 
+                className="w-full h-full" 
+                src="https://www.youtube.com/embed/S9na7fQlrGU" 
+                title="YouTube video player 4" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+              <iframe 
+                className="w-full h-full" 
+                src="https://www.youtube.com/embed/RrOGqchHZPE" 
+                title="YouTube video player 5" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="aspect-video bg-gray-100 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+              <iframe 
+                className="w-full h-full" 
+                src="https://www.youtube.com/embed/1K_fdKJKKk0" 
+                title="YouTube video player 6" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
