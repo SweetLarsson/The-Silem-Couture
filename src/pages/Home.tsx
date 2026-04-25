@@ -14,13 +14,7 @@ const SERVICES = [
     path: '/services/bespoke'
   },
   {
-    title: 'Courses',
-    description: 'Comprehensive fashion education covering basic to advanced tailoring techniques and designs.',
-    icon: BookOpen,
-    path: '/courses'
-  },
-  {
-    title: 'Bridals',
+    title: 'Bridal Wear',
     description: 'Stunning, custom-made wedding dresses crafted to make your special day truly unforgettable.',
     icon: HeartHandshake,
     path: '/services/bridals'
@@ -32,7 +26,13 @@ const SERVICES = [
     path: '/services/illustration'
   },
   {
-    title: 'Tutorials',
+    title: 'Online Courses',
+    description: 'Comprehensive fashion education covering basic to advanced tailoring techniques and designs.',
+    icon: BookOpen,
+    path: '/courses'
+  },
+  {
+    title: 'Sewing Tutorials',
     description: 'Bite-sized, practical YouTube tutorials focused on mastering specific sewing and design techniques.',
     icon: Video,
     path: '/services/tutorials'
@@ -127,18 +127,18 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pb-16 md:pb-24"
           >
-            <Link to="/gallery" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-medium uppercase tracking-wider hover:bg-peach-200 transition-colors rounded-full">
-              {t('hero.shop')}
+            <Link to="/designs" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-medium uppercase tracking-wider hover:bg-peach-200 transition-colors rounded-full text-center">
+              View Designs
             </Link>
-            <Link to="/courses" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white font-medium uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded-full">
-              {t('hero.courses')}
+            <Link to="/sewing" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white font-medium uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded-full text-center">
+              Learn Sewing
             </Link>
           </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-peach-100 dark:bg-gray-900">
+      <section className="py-24 bg-peach-100 dark:bg-gray-900" id="designs">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('services.title')}</h2>
@@ -246,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* YouTube Highlights */}
-      <section className="py-24">
+      <section className="py-24" id="sewing">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.watch_learn')}</h2>
@@ -334,15 +334,15 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-peach-100 dark:bg-gray-900">
-        <div className="mx-auto">
+      <section className="py-24 bg-peach-100 dark:bg-gray-900" id="testimonials">
+        <div className="w-full">
           <div className="text-center mb-16 px-4 md:px-8">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.client_voices')}</h2>
             <div className="w-24 h-1 bg-peach-500 mx-auto rounded-full" />
           </div>
           
           <div className="relative overflow-hidden w-full group py-8 -my-8">
-            <div className="transition-transform duration-500 ease-out group-hover:scale-105">
+            <div className="transition-transform duration-500 ease-out group-hover:scale-[1.02]">
               <div className="flex w-max animate-marquee">
                 {[...Array(2)].map((_, arrayIndex) => (
                   <div key={arrayIndex} className="flex gap-8 px-4">

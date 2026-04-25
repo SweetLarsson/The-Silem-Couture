@@ -7,136 +7,107 @@ import { useTranslation } from 'react-i18next';
 const COURSES = [
   {
     id: 1,
-    title: 'Beginners Course',
-    image: 'https://i.imgur.com/JWQO9Iv.jpeg',
-    description: 'Start your fashion journey with our comprehensive beginners course. Learn the fundamentals of sewing, fabric selection, and basic pattern making.',
-    learnings: [
-      'Introduction to sewing machines',
-      'Basic stitches and seams',
-      'Understanding fabrics',
-      'Taking accurate measurements',
-      'Creating simple garments'
-    ],
-    duration: '4 Weeks',
-    level: 'Beginner',
-    price: '₦50,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.9,
-    reviews: 124
-  },
-  {
-    id: 2,
-    title: 'Intermediate Course',
-    image: 'https://i.imgur.com/68ZBljU.jpeg',
-    description: 'Elevate your skills with advanced techniques. Perfect for those who have mastered the basics and want to create more complex designs.',
-    learnings: [
-      'Advanced pattern drafting',
-      'Complex garment construction',
-      'Working with delicate fabrics',
-      'Professional finishing techniques',
-      'Fitting and alterations'
-    ],
-    duration: '6 Weeks',
-    level: 'Intermediate',
-    price: '₦80,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.8,
-    reviews: 98
-  },
-  {
-    id: 3,
-    title: 'Trouser & Jumpsuit Masterclass',
-    image: 'https://i.imgur.com/G9S1QWm.jpeg',
-    description: 'Master the art of drafting and sewing perfect-fitting trousers and jumpsuits for various body types.',
-    learnings: [
-      'Trouser block drafting',
-      'Jumpsuit pattern manipulation',
-      'Crotch curve perfection',
-      'Pockets and fly zippers',
-      'Styling variations'
-    ],
-    duration: '3 Weeks',
-    level: 'Intermediate/Advanced',
-    price: '₦45,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 5.0,
-    reviews: 215
-  },
-  {
-    id: 4,
-    title: 'Hip & Butt Padding',
-    image: 'https://i.imgur.com/YrwoUhG.jpeg',
-    description: 'Learn the secret techniques to creating natural-looking hip and butt padding for enhanced silhouettes.',
-    learnings: [
-      'Anatomy of padding',
-      'Material selection',
-      'Drafting padding patterns',
-      'Seamless integration',
-      'Creating the perfect illusion'
-    ],
-    duration: '2 Weeks',
-    level: 'Advanced',
-    price: '₦60,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.9,
-    reviews: 156
-  },
-  {
-    id: 5,
-    title: 'Draping Masterclass',
+    title: 'Draping Online Course',
     image: 'https://i.imgur.com/lTzK3u5.jpeg',
     description: 'Discover the art of draping directly on the dress form to create unique, fluid, and sculptural designs.',
-    learnings: [
-      'Preparing the dress form',
-      'Basic draping principles',
-      'Creating cowls and twists',
-      'Transferring drape to paper',
-      'Avant-garde techniques'
-    ],
+    learnings: ['Preparing the dress form', 'Basic draping principles', 'Creating cowls and twists', 'Transferring drape to paper', 'Avant-garde techniques'],
     duration: '5 Weeks',
     level: 'Advanced',
-    price: '₦100,000',
+    price: '₦9,000',
     selarLink: 'https://selar.com/m/thesilem?lang=en',
     rating: 4.9,
     reviews: 89
   },
   {
+    id: 2,
+    title: 'Hip & Butt Padding Online Course',
+    image: 'https://i.imgur.com/YrwoUhG.jpeg',
+    description: 'Learn the secret techniques to creating natural-looking hip and butt padding for enhanced silhouettes.',
+    learnings: ['Anatomy of padding', 'Material selection', 'Drafting padding patterns', 'Seamless integration', 'Creating the perfect illusion'],
+    duration: '2 Weeks',
+    level: 'Advanced',
+    price: '₦7,000',
+    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    rating: 4.9,
+    reviews: 156
+  },
+  {
+    id: 3,
+    title: 'Size Chart Online Course',
+    image: 'https://i.imgur.com/z8FvD96.jpeg',
+    description: 'Learn how to create and use accurate size charts for professional tailoring.',
+    learnings: ['Taking accurate measurements', 'Developing size charts', 'Fitting techniques', 'Pattern adjustment', 'Client management'],
+    duration: '1 Week',
+    level: 'Beginner',
+    price: '₦5,000',
+    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    rating: 5.0,
+    reviews: 42
+  },
+  {
+    id: 4,
+    title: 'Bustier Online Course',
+    image: 'https://i.imgur.com/wvnGp4j.jpeg',
+    description: 'Learn to draft and construct flawless bustiers with built-in cups and impeccable support.',
+    learnings: ['Bustier pattern drafting', 'Cup sizing and foam application', 'Underwire insertion', 'Creating sheer panels', 'Attaching to skirts/trousers'],
+    duration: '3 Weeks',
+    level: 'Intermediate',
+    price: '₦8,000',
+    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    rating: 4.8,
+    reviews: 178
+  },
+  {
+    id: 5,
+    title: 'Intermediate Online Course',
+    image: 'https://i.imgur.com/68ZBljU.jpeg',
+    description: 'Elevate your skills with advanced techniques. Perfect for those who have mastered the basics.',
+    learnings: ['Advanced pattern drafting', 'Complex garment construction', 'Working with delicate fabrics', 'Professional finishing techniques', 'Fitting and alterations'],
+    duration: '6 Weeks',
+    level: 'Intermediate',
+    price: '₦7,000',
+    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    rating: 4.8,
+    reviews: 98
+  },
+  {
     id: 6,
-    title: 'Corset Making',
+    title: 'Trouser & Jumpsuit Online Course',
+    image: 'https://i.imgur.com/G9S1QWm.jpeg',
+    description: 'Master the art of drafting and sewing perfect-fitting trousers and jumpsuits.',
+    learnings: ['Trouser block drafting', 'Jumpsuit pattern manipulation', 'Crotch curve perfection', 'Pockets and fly zippers', 'Styling variations'],
+    duration: '3 Weeks',
+    level: 'Intermediate/Advanced',
+    price: '₦6,000',
+    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    rating: 5.0,
+    reviews: 215
+  },
+  {
+    id: 7,
+    title: 'Corset Online Course',
     image: 'https://i.imgur.com/3C75nKm.jpeg',
     description: 'Master the intricate art of corset making. Learn structure, boning, and creating the perfect hourglass silhouette.',
-    learnings: [
-      'Corset pattern drafting',
-      'Types of boning and application',
-      'Inserting busks and eyelets',
-      'Lining and finishing',
-      'Overbust vs Underbust'
-    ],
+    learnings: ['Corset pattern drafting', 'Types of boning and application', 'Inserting busks and eyelets', 'Lining and finishing', 'Overbust vs Underbust'],
     duration: '4 Weeks',
     level: 'Advanced',
-    price: '₦75,000',
+    price: '₦6,000',
     selarLink: 'https://selar.com/m/thesilem?lang=en',
     rating: 5.0,
     reviews: 342
   },
   {
-    id: 7,
-    title: 'Bustier Construction',
-    image: 'https://i.imgur.com/wvnGp4j.jpeg',
-    description: 'Learn to draft and construct flawless bustiers with built-in cups and impeccable support.',
-    learnings: [
-      'Bustier pattern drafting',
-      'Cup sizing and foam application',
-      'Underwire insertion',
-      'Creating sheer panels',
-      'Attaching to skirts/trousers'
-    ],
-    duration: '3 Weeks',
-    level: 'Intermediate',
-    price: '₦55,000',
+    id: 8,
+    title: 'Beginners Online Course',
+    image: 'https://i.imgur.com/JWQO9Iv.jpeg',
+    description: 'Start your fashion journey with our comprehensive beginners course.',
+    learnings: ['Introduction to sewing machines', 'Basic stitches and seams', 'Understanding fabrics', 'Taking accurate measurements', 'Creating simple garments'],
+    duration: '4 Weeks',
+    level: 'Beginner',
+    price: '₦7,000',
     selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.8,
-    reviews: 178
+    rating: 4.9,
+    reviews: 124
   }
 ];
 
@@ -289,7 +260,7 @@ export default function Courses() {
                   <img 
                     src={selectedCourse.image} 
                     alt={selectedCourse.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-t-none md:rounded-l-none"
                     referrerPolicy="no-referrer"
                   />
                 </div>

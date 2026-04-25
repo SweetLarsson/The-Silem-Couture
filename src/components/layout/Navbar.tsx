@@ -12,7 +12,7 @@ export function Navbar() {
   const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isDarkTop = isHome || location.pathname === '/gallery' || location.pathname.startsWith('/services');
+  const isDarkTop = isHome || location.pathname === '/gallery' || location.pathname.startsWith('/services') || location.pathname === '/designs' || location.pathname === '/sewing';
   const { t, i18n } = useTranslation();
 
   const languages = [
@@ -56,7 +56,7 @@ export function Navbar() {
       <div className="w-full px-4 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 -my-1 md:-my-2 block">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex-shrink-0 -my-1 md:-my-2 block">
             <img 
               src="https://i.imgur.com/qa5gS0Z.png" 
               alt="The Silem Couture" 
@@ -71,6 +71,7 @@ export function Navbar() {
               <Link 
                 key={link.name} 
                 to={link.path}
+                onClick={link.path === '/' ? () => window.scrollTo({ top: 0, behavior: 'smooth' }) : undefined}
                 className={cn(
                   "text-sm font-medium uppercase tracking-wider hover:text-peach-500 transition-colors",
                   location.pathname === link.path ? "text-peach-500" : textColorClass
@@ -155,6 +156,7 @@ export function Navbar() {
                       onClick={() => {
                         setIsMobileMenuOpen(false);
                         setIsMobileLangOpen(false);
+                        if (link.path === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                     >
                       {link.name}

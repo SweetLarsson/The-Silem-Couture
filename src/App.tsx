@@ -6,6 +6,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import Home from './pages/Home';
+import Designs from './pages/Designs';
+import Sewing from './pages/Sewing';
 import Courses from './pages/Courses';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
@@ -25,6 +27,8 @@ export default function App() {
         {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="designs" element={<Designs />} />
+          <Route path="sewing" element={<Sewing />} />
           <Route path="courses" element={<Courses />} />
           <Route path="services" element={<Services />} />
           <Route path="gallery" element={<Gallery />} />

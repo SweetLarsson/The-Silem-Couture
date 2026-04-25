@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Youtube, MapPin, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { PolicyModal } from './PolicyModal';
+import { SizeGuideModal } from './SizeGuideModal';
 
 export function Footer() {
   const { t } = useTranslation();
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
+  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
 
   return (
-    <footer className="bg-black text-white pt-20 pb-10">
-      <div className="container mx-auto px-4 md:px-8">
+    <>
+      <footer className="bg-black text-white pt-20 pb-10">
+        <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & Contact */}
           <div className="space-y-6">
@@ -51,8 +57,8 @@ export function Footer() {
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-6">{t('footer.customer_care')}</h3>
             <ul className="space-y-4 text-sm text-gray-400">
               <li><a href="tel:+2348060901607" className="hover:text-peach-400 transition-colors">Contact Us</a></li>
-              <li><a href="mailto:silem.couture@gmail.com" className="hover:text-peach-400 transition-colors">Shipping & Returns</a></li>
-              <li><a href="mailto:silem.couture@gmail.com" className="hover:text-peach-400 transition-colors">Size Guide</a></li>
+              <li><button onClick={() => setIsPolicyOpen(true)} className="hover:text-peach-400 transition-colors">Shipping & Returns</button></li>
+              <li><button onClick={() => setIsSizeGuideOpen(true)} className="hover:text-peach-400 transition-colors">Size Guide</button></li>
               <li><span className="hover:text-peach-400 transition-colors cursor-default">FAQ</span></li>
             </ul>
           </div>
@@ -111,5 +117,8 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    <PolicyModal isOpen={isPolicyOpen} onClose={() => setIsPolicyOpen(false)} />
+    <SizeGuideModal isOpen={isSizeGuideOpen} onClose={() => setIsSizeGuideOpen(false)} />
+    </>
   );
 }
