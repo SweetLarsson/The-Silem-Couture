@@ -6,15 +6,15 @@ export default function Illustration() {
     'https://i.imgur.com/cZ7JBI1.jpeg',
     'https://i.imgur.com/AcbW9KM.png',
     'https://i.imgur.com/MadBMGS.jpeg',
-    'https://i.imgur.com/4zLcarv.png',
-    'https://i.imgur.com/Tos8WQt.jpeg',
     'https://i.imgur.com/H91VSBX.png',
+    'https://i.imgur.com/Tos8WQt.jpeg',
+    'https://i.imgur.com/4zLcarv.png',
     'https://i.imgur.com/mpXGxin.jpeg',
     'https://i.imgur.com/gNzCX4d.png',
     'https://i.imgur.com/V6AWkwQ.jpeg',
-    'https://i.imgur.com/PQfZqHx.png',
+    'https://i.imgur.com/btXdzo8.png',
     'https://i.imgur.com/l4iXPy0.jpeg',
-    'https://i.imgur.com/btXdzo8.png'
+    'https://i.imgur.com/PQfZqHx.png'
   ];
 
   const whatsappMessage = encodeURIComponent("Hello! I would like to order a Fashion Illustration.");
