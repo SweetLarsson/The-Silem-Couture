@@ -19,7 +19,7 @@ export default function Sewing() {
       <div className="py-24">
         <Courses />
       </div>
-      <div className="py-24 bg-gray-50 dark:bg-black">
+      <div className="py-24 bg-gray-50">
         <Tutorials />
       </div>
     </PageTransition>

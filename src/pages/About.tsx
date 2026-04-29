@@ -7,7 +7,7 @@ export default function About() {
   return (
     <PageTransition>
       {/* Header */}
-      <section className="pt-32 pb-16 bg-peach-100 dark:bg-gray-900">
+      <section className="pt-32 pb-16 bg-peach-100">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">{t('about.title')}</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto" />
@@ -32,7 +32,7 @@ export default function About() {
                   className="w-full h-auto object-cover shadow-2xl rounded-2xl"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-peach-200 dark:bg-peach-900 -z-10 hidden md:block rounded-2xl" />
+                <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-peach-200 -z-10 hidden md:block rounded-2xl" />
                 <div className="absolute -top-8 -left-8 w-32 h-32 border-2 border-peach-500 -z-10 hidden md:block rounded-2xl" />
               </div>
             </motion.div>
@@ -45,17 +45,17 @@ export default function About() {
               className="w-full lg:w-1/2 space-y-8"
             >
               <h2 className="text-3xl font-bold tracking-widest uppercase">{t('about.vision_title')}</h2>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-lg">
                 {t('about.story_p1')}
               </p>
               
               <h2 className="text-3xl font-bold tracking-widest uppercase pt-6">{t('about.mission_title')}</h2>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-lg">
                 {t('about.mission_desc')}
               </p>
 
               <h2 className="text-3xl font-bold tracking-widest uppercase pt-6">{t('about.story_title')}</h2>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-lg">
                 {t('about.story_p2')}
               </p>
             </motion.div>

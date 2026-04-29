@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-peach-100 dark:bg-gray-900" id="designs">
+      <section className="py-24 bg-peach-100" id="designs">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('services.title')}</h2>
@@ -153,14 +153,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-black p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden"
+                className="bg-white p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden"
               >
                 <Link to={service.path} className="flex flex-col h-full w-full p-10">
-                  <div className="w-16 h-16 mx-auto bg-peach-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-peach-500 group-hover:text-white transition-colors">
+                  <div className="w-16 h-16 mx-auto bg-peach-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-peach-500 group-hover:text-white transition-colors">
                     <service.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold uppercase tracking-wider mb-4">{service.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                 </Link>
@@ -251,7 +251,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.watch_learn')}</h2>
             <div className="w-24 h-1 bg-peach-500 mx-auto mb-6 rounded-full" />
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               {t('home.watch_learn_desc')}
             </p>
           </div>
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-peach-100 dark:bg-gray-900" id="testimonials">
+      <section className="py-24 bg-peach-100" id="testimonials">
         <div className="w-full">
           <div className="text-center mb-16 px-4 md:px-8">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.client_voices')}</h2>
@@ -349,14 +349,14 @@ export default function Home() {
                     {TESTIMONIALS.map((testimonial, index) => (
                       <div
                         key={index}
-                        className="bg-white dark:bg-black p-8 text-center shadow-sm rounded-2xl w-80 md:w-96 flex-shrink-0 flex flex-col justify-between"
+                        className="bg-white p-8 text-center shadow-sm rounded-2xl w-80 md:w-96 flex-shrink-0 flex flex-col justify-between"
                       >
                         <div className="flex justify-center space-x-1 mb-6 text-peach-500">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-5 h-5 ${i < testimonial.rating ? 'fill-current' : 'text-gray-300 dark:text-gray-700'}`} />
+                            <Star key={i} className={`w-5 h-5 ${i < testimonial.rating ? 'fill-current' : 'text-gray-300'}`} />
                           ))}
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400 italic mb-6 leading-relaxed flex-grow">
+                        <p className="text-gray-600 italic mb-6 leading-relaxed flex-grow">
                           "{testimonial.content}"
                         </p>
                         <div>

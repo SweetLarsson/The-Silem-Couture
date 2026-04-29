@@ -38,11 +38,11 @@ export default function Blog() {
   return (
     <PageTransition>
       {/* Header */}
-      <section className="pt-32 pb-16 bg-peach-100 dark:bg-gray-900">
+      <section className="pt-32 pb-16 bg-peach-100">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">{t('blog.title')}</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto mb-6" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('blog.subtitle')}
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function Blog() {
                 </div>
                 
                 <div className="flex-grow flex flex-col">
-                  <div className="flex items-center text-gray-500 dark:text-gray-400 space-x-4 text-xs uppercase tracking-widest mb-4">
+                  <div className="flex items-center text-gray-500 space-x-4 text-xs uppercase tracking-widest mb-4">
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>{post.author}</span>
@@ -119,11 +119,11 @@ export default function Blog() {
                     {post.title}
                   </h4>
                   
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
+                  <p className="text-gray-600 mb-6 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
-                  <div className="mt-auto flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-black dark:text-white group-hover:text-peach-500 transition-colors">
+                  <div className="mt-auto flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-black group-hover:text-peach-500 transition-colors">
                     <span>{t('blog.read_more')}</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
