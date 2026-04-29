@@ -13,16 +13,16 @@ export default function Dashboard() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat) => (
-          <div key={stat.name} className="bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm">
+          <div key={stat.name} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 bg-peach-100 dark:bg-peach-900/30 text-peach-600 dark:text-peach-400 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-peach-100 text-peach-600 rounded-full flex items-center justify-center">
                 <stat.icon className="w-5 h-5" />
               </div>
-              <span className="text-sm font-medium text-green-600 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">
+              <span className="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded">
                 {stat.change}
               </span>
             </div>
-            <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium">{stat.name}</h3>
+            <h3 className="text-gray-500 text-sm font-medium">{stat.name}</h3>
             <p className="text-2xl font-bold mt-1">{stat.value}</p>
           </div>
         ))}
@@ -30,11 +30,11 @@ export default function Dashboard() {
 
       {/* Recent Orders & Top Products */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm">
+        <div className="lg:col-span-2 bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
           <h3 className="text-lg font-bold mb-4">Recent Orders</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-800">
+              <thead className="text-gray-500 border-b border-gray-200">
                 <tr>
                   <th className="pb-3 font-medium">Order ID</th>
                   <th className="pb-3 font-medium">Customer</th>
@@ -43,14 +43,14 @@ export default function Dashboard() {
                   <th className="pb-3 font-medium">Amount</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
+              <tbody className="divide-y divide-gray-200">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <tr key={i}>
                     <td className="py-4 font-medium">#ORD-{1000 + i}</td>
                     <td className="py-4">Jane Doe</td>
                     <td className="py-4">Silk Draped Gown</td>
                     <td className="py-4">
-                      <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-500 px-2 py-1 rounded text-xs font-medium">
+                      <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">
                         Processing
                       </span>
                     </td>
@@ -62,7 +62,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm">
+        <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
           <h3 className="text-lg font-bold mb-4">Top Selling Courses</h3>
           <div className="space-y-4">
             {[
@@ -70,12 +70,12 @@ export default function Dashboard() {
               { name: 'Trouser Masterclass', sales: 98, price: '₦45,000' },
               { name: 'Draping Masterclass', sales: 85, price: '₦100,000' },
             ].map((course, i) => (
-              <div key={i} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800/50 rounded-md">
+              <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-md">
                 <div>
                   <h4 className="font-medium text-sm">{course.name}</h4>
                   <p className="text-xs text-gray-500">{course.sales} sales</p>
                 </div>
-                <span className="font-bold text-sm text-peach-600 dark:text-peach-400">{course.price}</span>
+                <span className="font-bold text-sm text-peach-600">{course.price}</span>
               </div>
             ))}
           </div>

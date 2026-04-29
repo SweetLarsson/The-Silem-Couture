@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -22,12 +22,20 @@ export function Navbar() {
     { code: 'es', label: 'Español' },
   ];
 
+  const langDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    function handleClickOutside(event: MouseEvent) {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node) && !(event.target as HTMLElement).closest('[data-lang-trigger]')) {
+        setIsDesktopLangOpen(false);
+      }
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node) && !(event.target as HTMLElement).closest('[data-mobile-trigger]')) {
+        setIsMobileMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const navLinks = [
@@ -86,10 +94,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-6">
             <div 
               className="relative" 
+              ref={langDropdownRef}
               onMouseEnter={() => setIsDesktopLangOpen(true)} 
               onMouseLeave={() => setIsDesktopLangOpen(false)}
             >
-              <button className={cn("relative flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-gray-200/20 rounded-2xl transition-all hover:bg-white/20", textColorClass)}>
+              <button data-lang-trigger className={cn("relative flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-gray-200/20 rounded-2xl transition-all hover:bg-white/20", textColorClass)}>
                 <Globe className="w-4 h-4 mr-2" />
                 <span className="text-sm font-bold uppercase tracking-wider">{languages.find(l => l.code === i18n.language)?.label || 'en'}</span>
                 <ChevronDown className="w-4 h-4 ml-2 opacity-70" />
@@ -108,7 +117,7 @@ export function Navbar() {
                       <button
                         key={lang.code}
                         className={cn(
-                          "text-left px-5 py-2.5 text-sm font-medium hover:bg-peach-50 dark:hover:bg-white/5 transition-colors",
+                          "text-left px-5 py-2.5 text-sm font-medium hover:bg-peach-50 transition-colors",
                           i18n.language === lang.code ? "text-peach-600 bg-peach-50/50" : "text-gray-700"
                         )}
                         onClick={() => {
@@ -128,6 +137,7 @@ export function Navbar() {
           {/* Mobile Menu Container */}
           <div className="md:hidden relative">
             <button 
+              data-mobile-trigger
               className="p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -142,6 +152,7 @@ export function Navbar() {
             <AnimatePresence>
               {isMobileMenuOpen && (
                 <motion.div 
+                  ref={mobileMenuRef}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
