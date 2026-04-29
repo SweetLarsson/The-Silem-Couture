@@ -306,7 +306,6 @@ export default function Courses() {
               'https://i.imgur.com/D17RVE3.jpeg',
               'https://i.imgur.com/4GtpIWw.jpeg',
               'https://i.imgur.com/0gC5n6U.jpeg',
-              'https://i.imgur.com/8iU5Qcx.jpeg',
               'https://i.imgur.com/Lo5wOWO.jpeg',
               'https://i.imgur.com/ZLYo70b.jpeg',
               'https://i.imgur.com/rsq88Ys.jpeg',

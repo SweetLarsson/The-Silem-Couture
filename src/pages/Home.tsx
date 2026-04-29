@@ -170,7 +170,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fashion Illustration Preview */}
+      {/* Fashion Design Preview */}
       <section className="py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -197,7 +197,7 @@ export default function Home() {
                 <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4 rounded-2xl">
                   <img 
                     src={src} 
-                    alt="Fashion Illustration" 
+                    alt="Fashion Design" 
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
