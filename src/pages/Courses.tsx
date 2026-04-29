@@ -168,7 +168,7 @@ const COURSES = [
     id: 7,
     title: 'Size Chart Course',
     image: 'https://i.imgur.com/z8FvD96.jpeg',
-    price: '4,000 Naira',
+    price: '5,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
