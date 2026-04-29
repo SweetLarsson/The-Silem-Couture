@@ -5,7 +5,13 @@ export default function Bridals() {
   const images = [
     'https://i.imgur.com/DZejhKa.jpeg',
     'https://i.imgur.com/esqLmo0.jpeg',
-    'https://i.imgur.com/0MKiqY2.jpeg'
+    'https://i.imgur.com/0MKiqY2.jpeg',
+    'https://i.imgur.com/60dFXaW.jpeg',
+    'https://i.imgur.com/hFo51xL.jpeg',
+    'https://i.imgur.com/UaOMTQC.jpeg',
+    'https://i.imgur.com/Nld6ntI.jpeg',
+    'https://i.imgur.com/qngQnNl.jpeg',
+    'https://i.imgur.com/jVlxUGN.jpeg'
   ];
 
   const whatsappMessage = encodeURIComponent("Hello! I would like to order a Custom Made Wedding Dress.");

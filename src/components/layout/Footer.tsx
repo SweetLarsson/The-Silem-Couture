@@ -59,7 +59,6 @@ export function Footer() {
               <li><a href="tel:+2348060901607" className="hover:text-peach-400 transition-colors">Contact Us</a></li>
               <li><button onClick={() => setIsPolicyOpen(true)} className="hover:text-peach-400 transition-colors">Shipping & Returns</button></li>
               <li><button onClick={() => setIsSizeGuideOpen(true)} className="hover:text-peach-400 transition-colors">Size Guide</button></li>
-              <li><span className="hover:text-peach-400 transition-colors cursor-default">FAQ</span></li>
             </ul>
           </div>
 

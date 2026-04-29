@@ -12,7 +12,7 @@ export function Navbar() {
   const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isDarkTop = isHome || location.pathname === '/gallery' || location.pathname === '/designs' || location.pathname === '/sewing';
+  const isDarkTop = location.pathname === '/gallery' || location.pathname === '/designs' || location.pathname === '/sewing';
   const { t, i18n } = useTranslation();
 
   const languages = [
@@ -58,7 +58,7 @@ export function Navbar() {
     <nav 
       className={cn(
         'fixed w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-white/70 backdrop-blur-md py-4'
       )}
     >
       <div className="w-full px-4 md:px-8">

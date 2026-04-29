@@ -185,12 +185,19 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="group cursor-pointer">
+            {[
+              'https://i.imgur.com/OzR0jYt.jpeg',
+              'https://i.imgur.com/CYd3QYF.jpeg',
+              'https://i.imgur.com/PV8Vg7T.jpeg',
+              'https://i.imgur.com/gyoqSbn.jpeg',
+              'https://i.imgur.com/qm4UqiX.jpeg',
+              'https://i.imgur.com/nyvqwX3.jpeg',
+            ].map((src, index) => (
+              <div key={index} className="group cursor-pointer">
                 <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4 rounded-2xl">
                   <img 
-                    src={`https://i.imgur.com/DBjXsBz.jpeg`} 
-                    alt="Featured Product" 
+                    src={src} 
+                    alt="Fashion Illustration" 
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
@@ -198,8 +205,6 @@ export default function Home() {
                     <span className="px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-wider rounded-full">{t('home.quick_view')}</span>
                   </div>
                 </div>
-                <h3 className="text-sm font-bold uppercase tracking-wider mb-2">{t('home.luxury_piece')} {item}</h3>
-                <p className="text-gray-500">$250.00</p>
               </div>
             ))}
           </div>
