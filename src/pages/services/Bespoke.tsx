@@ -18,17 +18,17 @@ export default function Bespoke() {
 
   return (
     <PageTransition>
-      <section className="pt-32 pb-16 bg-black text-white text-center">
+      <section className="pt-32 pb-16 bg-white text-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">Bespoke Tailoring</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto mb-6 rounded-full" />
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto font-light">
             Discover a gallery of breathtaking outfits we have crafted for our past clients, tailored perfectly to their unique measurements and style.
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50 dark:bg-black">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {images.map((src, index) => (
@@ -55,7 +55,7 @@ export default function Bespoke() {
                href={`https://wa.me/message/TE4G3XZ3KAOMM1`} 
                target="_blank" 
                rel="noopener noreferrer"
-               className="inline-block px-12 py-5 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wider hover:bg-peach-500 dark:hover:bg-peach-500 hover:text-white transition-all transform hover:-translate-y-1 rounded-full text-sm shadow-xl"
+               className="inline-block px-12 py-5 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-all transform hover:-translate-y-1 rounded-full text-sm shadow-xl"
              >
                Order a Bespoke Outfit
              </a>

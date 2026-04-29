@@ -118,11 +118,11 @@ export default function Courses() {
   return (
     <PageTransition>
       {/* Header */}
-      <section className="pt-32 pb-16 bg-peach-100 dark:bg-gray-900">
+      <section className="pt-32 pb-16 bg-peach-100">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">{t('courses.title')}</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto mb-6" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('courses.subtitle')}
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function Courses() {
               <motion.div
                 key={course.id}
                 whileHover={{ y: -10 }}
-                className="bg-white dark:bg-black shadow-lg cursor-pointer group overflow-hidden rounded-2xl"
+                className="bg-white shadow-lg cursor-pointer group overflow-hidden rounded-2xl"
                 onClick={() => setSelectedCourse(course)}
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
@@ -154,7 +154,7 @@ export default function Courses() {
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold uppercase tracking-wider leading-tight">{course.title}</h3>
                   </div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
                       <span>{course.duration}</span>
@@ -167,7 +167,7 @@ export default function Courses() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-1 text-peach-500">
                       <Star className="w-4 h-4 fill-current" />
-                      <span className="font-medium text-black dark:text-white">{course.rating}</span>
+                      <span className="font-medium text-black">{course.rating}</span>
                       <span className="text-gray-400 text-xs">({course.reviews})</span>
                     </div>
                     <span className="font-bold text-lg">{course.price}</span>
@@ -180,12 +180,12 @@ export default function Courses() {
       </section>
 
       {/* Student Outfits Gallery */}
-      <section className="py-24 bg-peach-50 dark:bg-black">
+      <section className="py-24 bg-peach-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">Made by Our Students</h2>
             <div className="w-24 h-1 bg-peach-500 mx-auto rounded-full mb-6" />
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
               Take a look at the stunning outfits our online students have crafted after taking our courses.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function Courses() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl rounded-2xl"
+                className="bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl rounded-2xl"
               >
                 <button 
                   onClick={() => setSelectedCourse(null)}
@@ -260,7 +260,7 @@ export default function Courses() {
                   <img 
                     src={selectedCourse.image} 
                     alt={selectedCourse.title} 
-                    className="w-full h-full object-cover rounded-t-none md:rounded-l-none"
+                    className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -270,14 +270,14 @@ export default function Courses() {
                     <h2 className="text-3xl font-bold uppercase tracking-wider">{selectedCourse.title}</h2>
                   </div>
                   
-                  <div className="flex items-center space-x-6 mb-8 text-sm border-b border-gray-200 dark:border-gray-800 pb-6">
+                  <div className="flex items-center space-x-6 mb-8 text-sm border-b border-gray-200 pb-6">
                     <div className="flex items-center space-x-2">
                       <Clock className="w-5 h-5 text-peach-500" />
-                      <span className="text-gray-600 dark:text-gray-400">{selectedCourse.duration}</span>
+                      <span className="text-gray-600">{selectedCourse.duration}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <BarChart className="w-5 h-5 text-peach-500" />
-                      <span className="text-gray-600 dark:text-gray-400">{selectedCourse.level}</span>
+                      <span className="text-gray-600">{selectedCourse.level}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Star className="w-5 h-5 text-peach-500 fill-current" />
@@ -287,14 +287,14 @@ export default function Courses() {
 
                   <div className="mb-8 flex-grow">
                     <h3 className="font-bold uppercase tracking-wider mb-3">{t('courses.about')}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {selectedCourse.description}
                     </p>
 
                     <h3 className="font-bold uppercase tracking-wider mb-3">{t('courses.learn')}</h3>
                     <ul className="space-y-2">
                       {selectedCourse.learnings.map((learning, index) => (
-                        <li key={index} className="flex items-start space-x-3 text-gray-600 dark:text-gray-400">
+                        <li key={index} className="flex items-start space-x-3 text-gray-600">
                           <span className="text-peach-500 font-bold mt-1">•</span>
                           <span>{learning}</span>
                         </li>
@@ -302,7 +302,7 @@ export default function Courses() {
                     </ul>
                   </div>
 
-                  <div className="mt-auto pt-6 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between">
+                  <div className="mt-auto pt-6 border-t border-gray-200 flex items-center justify-between">
                     <div>
                       <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">{t('courses.fee')}</p>
                       <p className="text-3xl font-bold">{selectedCourse.price}</p>
@@ -311,7 +311,7 @@ export default function Courses() {
                       href={selectedCourse.selarLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-wider hover:bg-peach-500 dark:hover:bg-peach-500 hover:text-white transition-colors"
+                      className="px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors"
                     >
                       {t('courses.buy')}
                     </a>
