@@ -29,47 +29,71 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
             <li><strong>Hips:</strong> Measure around the fullest part of your hips, approximately 8 inches below your waist.</li>
           </ul>
 
-          <h2 className="text-lg font-bold mt-4">STANDARD SIZE CHART (INCHES)</h2>
-          <table className="w-full text-left border-collapse mt-4">
+          <h2 className="text-lg font-bold mt-4">Women’s Size Guide (UK Sizes)</h2>
+          <table className="w-full text-left border-collapse mt-4 text-xs">
             <thead>
-              <tr className="border-b">
-                <th className="p-2">Size</th>
-                <th className="p-2">Bust</th>
-                <th className="p-2">Waist</th>
-                <th className="p-2">Hips</th>
+              <tr className="border-b bg-gray-100">
+                <th className="p-2">UK Size</th>
+                <th className="p-2">Label</th>
+                <th className="p-2">Bust (in)</th>
+                <th className="p-2">Waist (in)</th>
+                <th className="p-2">Hips (in)</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b">
-                <td className="p-2">XS</td>
-                <td className="p-2">32</td>
-                <td className="p-2">24</td>
-                <td className="p-2">34</td>
+              {[
+                { uk: '6', label: 'XS', bust: '31–32', waist: '23–24', hips: '33–34' },
+                { uk: '8', label: 'S', bust: '33–34', waist: '25–26', hips: '35–36' },
+                { uk: '10', label: 'M', bust: '35–36', waist: '27–28', hips: '37–38' },
+                { uk: '12', label: 'L', bust: '37–38', waist: '29–30', hips: '39–40' },
+                { uk: '14', label: 'XL', bust: '39–40', waist: '31–32', hips: '41–42' },
+                { uk: '16', label: 'XXL', bust: '41–42', waist: '33–34', hips: '43–44' },
+              ].map((row) => (
+                <tr key={row.uk} className="border-b">
+                  <td className="p-2">{row.uk}</td>
+                  <td className="p-2">{row.label}</td>
+                  <td className="p-2">{row.bust}</td>
+                  <td className="p-2">{row.waist}</td>
+                  <td className="p-2">{row.hips}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <h2 className="text-lg font-bold mt-8">Women’s International Size Conversion</h2>
+          <table className="w-full text-left border-collapse mt-4 text-xs">
+            <thead>
+              <tr className="border-b bg-gray-100">
+                <th className="p-2">UK Size</th>
+                <th className="p-2">Label</th>
+                <th className="p-2">US</th>
+                <th className="p-2">EU</th>
+                <th className="p-2">AU</th>
+                <th className="p-2">Bust (in)</th>
+                <th className="p-2">Waist (in)</th>
+                <th className="p-2">Hips (in)</th>
               </tr>
-              <tr className="border-b">
-                <td className="p-2">S</td>
-                <td className="p-2">34</td>
-                <td className="p-2">26</td>
-                <td className="p-2">36</td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-2">M</td>
-                <td className="p-2">36</td>
-                <td className="p-2">28</td>
-                <td className="p-2">38</td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-2">L</td>
-                <td className="p-2">38</td>
-                <td className="p-2">30</td>
-                <td className="p-2">40</td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-2">XL</td>
-                <td className="p-2">40</td>
-                <td className="p-2">32</td>
-                <td className="p-2">42</td>
-              </tr>
+            </thead>
+            <tbody>
+              {[
+                { uk: '6', label: 'XS', us: '2', eu: '34', au: '6', bust: '31–32', waist: '23–24', hips: '33–34' },
+                { uk: '8', label: 'S', us: '4', eu: '36', au: '8', bust: '33–34', waist: '25–26', hips: '35–36' },
+                { uk: '10', label: 'M', us: '6', eu: '38', au: '10', bust: '35–36', waist: '27–28', hips: '37–38' },
+                { uk: '12', label: 'L', us: '8', eu: '40', au: '12', bust: '37–38', waist: '29–30', hips: '39–40' },
+                { uk: '14', label: 'XL', us: '10', eu: '42', au: '14', bust: '39–40', waist: '31–32', hips: '41–42' },
+                { uk: '16', label: 'XXL', us: '12', eu: '44', au: '16', bust: '41–42', waist: '33–34', hips: '43–44' },
+              ].map((row) => (
+                <tr key={row.uk} className="border-b">
+                  <td className="p-2">{row.uk}</td>
+                  <td className="p-2">{row.label}</td>
+                  <td className="p-2">{row.us}</td>
+                  <td className="p-2">{row.eu}</td>
+                  <td className="p-2">{row.au}</td>
+                  <td className="p-2">{row.bust}</td>
+                  <td className="p-2">{row.waist}</td>
+                  <td className="p-2">{row.hips}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
           
