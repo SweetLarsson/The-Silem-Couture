@@ -350,7 +350,7 @@ export default function Courses() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-white w-full max-w-5xl h-[80vh] flex relative shadow-2xl rounded-2xl overflow-hidden"
+                className="bg-white w-full max-w-2xl h-[80vh] flex flex-col relative shadow-2xl rounded-2xl overflow-hidden"
               >
                 <button 
                   onClick={() => setSelectedCourse(null)}
@@ -359,18 +359,20 @@ export default function Courses() {
                   <X className="w-6 h-6" />
                 </button>
 
-                {/* Fixed Image Left */}
-                <div className="w-1/3 h-full flex-shrink-0">
+                {/* Fixed Image Top */}
+                <div className="w-full h-1/3 flex-shrink-0 relative">
                   <img 
                     src={selectedCourse.image} 
                     alt={selectedCourse.title} 
                     className="w-full h-full object-cover rounded-none"
                     referrerPolicy="no-referrer"
                   />
+                  {/* Fade effect */}
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
                 </div>
 
-                {/* Scrollable Details Right */}
-                <div className="w-2/3 h-full overflow-y-auto p-12">
+                {/* Scrollable Details Bottom */}
+                <div className="w-full h-2/3 overflow-y-auto p-12 -mt-10">
                   <h2 className="text-3xl font-bold uppercase tracking-wider mb-6">{selectedCourse.title}</h2>
                   
                   <div className="space-y-4 text-sm text-gray-600 mb-6">

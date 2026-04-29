@@ -11,14 +11,14 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white dark:bg-gray-900 w-full max-w-2xl max-h-[80vh] rounded-3xl p-8 relative overflow-y-scroll scrollbar-hide" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white w-full max-w-2xl max-h-[80vh] rounded-3xl p-8 relative overflow-y-scroll scrollbar-hide" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="absolute top-4 right-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
-        <div className="prose dark:prose-invert max-w-none text-sm">
+        <div className="prose max-w-none text-sm">
           <h1 className="text-2xl font-bold mb-4">SIZE GUIDE</h1>
           <p className="mb-6">To ensure the perfect fit for your custom garment, please refer to our measurement guide below.</p>
           
@@ -32,12 +32,12 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
           <h2 className="text-lg font-bold mt-4">Women’s Size Guide (UK Sizes)</h2>
           <table className="w-full text-left border-collapse mt-4 text-xs">
             <thead>
-              <tr className="border-b bg-gray-100">
-                <th className="p-2">UK Size</th>
-                <th className="p-2">Label</th>
-                <th className="p-2">Bust (in)</th>
-                <th className="p-2">Waist (in)</th>
-                <th className="p-2">Hips (in)</th>
+              <tr className="border-b border-gray-300 bg-gray-100">
+                <th className="p-2 border border-gray-300">UK Size</th>
+                <th className="p-2 border border-gray-300">Label</th>
+                <th className="p-2 border border-gray-300">Bust (in)</th>
+                <th className="p-2 border border-gray-300">Waist (in)</th>
+                <th className="p-2 border border-gray-300">Hips (in)</th>
               </tr>
             </thead>
             <tbody>
@@ -49,12 +49,12 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
                 { uk: '14', label: 'XL', bust: '39–40', waist: '31–32', hips: '41–42' },
                 { uk: '16', label: 'XXL', bust: '41–42', waist: '33–34', hips: '43–44' },
               ].map((row) => (
-                <tr key={row.uk} className="border-b">
-                  <td className="p-2">{row.uk}</td>
-                  <td className="p-2">{row.label}</td>
-                  <td className="p-2">{row.bust}</td>
-                  <td className="p-2">{row.waist}</td>
-                  <td className="p-2">{row.hips}</td>
+                <tr key={row.uk} className="border-b border-gray-300">
+                  <td className="p-2 border border-gray-300">{row.uk}</td>
+                  <td className="p-2 border border-gray-300">{row.label}</td>
+                  <td className="p-2 border border-gray-300">{row.bust}</td>
+                  <td className="p-2 border border-gray-300">{row.waist}</td>
+                  <td className="p-2 border border-gray-300">{row.hips}</td>
                 </tr>
               ))}
             </tbody>
@@ -63,15 +63,15 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
           <h2 className="text-lg font-bold mt-8">Women’s International Size Conversion</h2>
           <table className="w-full text-left border-collapse mt-4 text-xs">
             <thead>
-              <tr className="border-b bg-gray-100">
-                <th className="p-2">UK Size</th>
-                <th className="p-2">Label</th>
-                <th className="p-2">US</th>
-                <th className="p-2">EU</th>
-                <th className="p-2">AU</th>
-                <th className="p-2">Bust (in)</th>
-                <th className="p-2">Waist (in)</th>
-                <th className="p-2">Hips (in)</th>
+              <tr className="border-b border-gray-300 bg-gray-100">
+                <th className="p-2 border border-gray-300">UK Size</th>
+                <th className="p-2 border border-gray-300">Label</th>
+                <th className="p-2 border border-gray-300">US</th>
+                <th className="p-2 border border-gray-300">EU</th>
+                <th className="p-2 border border-gray-300">AU</th>
+                <th className="p-2 border border-gray-300">Bust (in)</th>
+                <th className="p-2 border border-gray-300">Waist (in)</th>
+                <th className="p-2 border border-gray-300">Hips (in)</th>
               </tr>
             </thead>
             <tbody>
@@ -83,15 +83,15 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
                 { uk: '14', label: 'XL', us: '10', eu: '42', au: '14', bust: '39–40', waist: '31–32', hips: '41–42' },
                 { uk: '16', label: 'XXL', us: '12', eu: '44', au: '16', bust: '41–42', waist: '33–34', hips: '43–44' },
               ].map((row) => (
-                <tr key={row.uk} className="border-b">
-                  <td className="p-2">{row.uk}</td>
-                  <td className="p-2">{row.label}</td>
-                  <td className="p-2">{row.us}</td>
-                  <td className="p-2">{row.eu}</td>
-                  <td className="p-2">{row.au}</td>
-                  <td className="p-2">{row.bust}</td>
-                  <td className="p-2">{row.waist}</td>
-                  <td className="p-2">{row.hips}</td>
+                <tr key={row.uk} className="border-b border-gray-300">
+                  <td className="p-2 border border-gray-300">{row.uk}</td>
+                  <td className="p-2 border border-gray-300">{row.label}</td>
+                  <td className="p-2 border border-gray-300">{row.us}</td>
+                  <td className="p-2 border border-gray-300">{row.eu}</td>
+                  <td className="p-2 border border-gray-300">{row.au}</td>
+                  <td className="p-2 border border-gray-300">{row.bust}</td>
+                  <td className="p-2 border border-gray-300">{row.waist}</td>
+                  <td className="p-2 border border-gray-300">{row.hips}</td>
                 </tr>
               ))}
             </tbody>
