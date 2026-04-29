@@ -179,8 +179,6 @@ export default function Home() {
               <div className="w-24 h-1 bg-peach-500 rounded-full" />
             </div>
             <div className="hidden md:flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-gray-400 cursor-not-allowed">
-              <span>{t('home.view_all')}</span>
-              <ArrowRight className="w-4 h-4" />
             </div>
           </div>
           

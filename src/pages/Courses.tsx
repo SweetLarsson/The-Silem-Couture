@@ -411,7 +411,7 @@ export default function Courses() {
                       href={selectedCourse.selarLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors"
+                      className="px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors rounded-full"
                     >
                       Buy on Selar
                     </a>
