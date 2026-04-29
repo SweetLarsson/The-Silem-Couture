@@ -11,7 +11,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose }) => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white dark:bg-gray-900 w-full max-w-2xl max-h-[80vh] rounded-3xl p-8 relative overflow-y-scroll scrollbar-hide" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white w-full max-w-2xl max-h-[80vh] rounded-3xl p-8 relative overflow-y-scroll scrollbar-hide" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
@@ -77,7 +77,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose }) => 
           <h3 className="font-bold text-center">CONTACT US</h3>
           <p className="text-center">For any shipping or return inquiries, please contact: silem.couture@gmail.com</p>
           
-          <hr className="my-8 border-gray-300 dark:border-gray-600" />
+          <hr className="my-8 border-gray-300" />
 
           <p className="text-center italic text-xs">By placing an order, you agree to the terms outlined in this policy.</p>
         </div>
