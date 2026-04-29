@@ -27,7 +27,7 @@ export default function About() {
             >
               <div className="relative">
                 <img 
-                  src="https://i.imgur.com/yb2cNBy.jpeg" 
+                  src="https://i.imgur.com/QRP8TR4.jpeg" 
                   alt="The Silem Couture Studio" 
                   className="w-full h-auto object-cover shadow-2xl rounded-2xl"
                   referrerPolicy="no-referrer"

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowRight, Scissors, BookOpen, Video, Star, Youtube, PenTool, Palette } from 'lucide-react';
@@ -86,6 +87,7 @@ const TESTIMONIALS = [
 
 export default function Home() {
   const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <PageTransition>
@@ -190,7 +192,7 @@ export default function Home() {
               'https://i.imgur.com/qm4UqiX.jpeg',
               'https://i.imgur.com/nyvqwX3.jpeg',
             ].map((src, index) => (
-              <div key={index} className="group cursor-pointer">
+              <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(src)}>
                 <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4 rounded-2xl">
                   <img 
                     src={src} 
@@ -205,8 +207,23 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
 
+          {selectedImage && (
+            <div 
+              className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div className="max-w-4xl w-full max-h-[90vh]">
+                <img 
+                  src={selectedImage} 
+                  alt="Selected design" 
+                  className="max-w-full max-h-[90vh] object-contain rounded-2xl"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+          )}
+          
         </div>
       </section>
 
@@ -216,7 +233,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <img 
-                src="https://i.imgur.com/yb2cNBy.jpeg" 
+                src="https://i.imgur.com/QRP8TR4.jpeg" 
                 alt="About The Silem Couture" 
                 className="w-full h-auto object-cover rounded-2xl"
                 referrerPolicy="no-referrer"

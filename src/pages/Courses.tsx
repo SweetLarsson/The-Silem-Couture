@@ -9,7 +9,7 @@ const COURSES = [
     id: 1,
     title: 'Beginners Course',
     image: 'https://i.imgur.com/JWQO9Iv.jpeg',
-    price: '6,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -35,7 +35,7 @@ const COURSES = [
     id: 2,
     title: 'Intermediate course',
     image: 'https://i.imgur.com/68ZBljU.jpeg',
-    price: '6,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -62,7 +62,7 @@ const COURSES = [
     id: 3,
     title: 'Trouser Course',
     image: 'https://i.imgur.com/G9S1QWm.jpeg',
-    price: '5,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -90,7 +90,7 @@ const COURSES = [
     id: 4,
     title: 'Bustier Course',
     image: 'https://i.imgur.com/wvnGp4j.jpeg',
-    price: '7,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -116,7 +116,7 @@ const COURSES = [
     id: 5,
     title: 'Corset Course',
     image: 'https://i.imgur.com/3C75nKm.jpeg',
-    price: '5,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -142,7 +142,7 @@ const COURSES = [
     id: 6,
     title: 'Draping Course',
     image: 'https://i.imgur.com/lTzK3u5.jpeg',
-    price: '8,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -190,7 +190,7 @@ const COURSES = [
     id: 8,
     title: 'Hip & Butt Padding Course',
     image: 'https://i.imgur.com/YrwoUhG.jpeg',
-    price: '6,000 Naira',
+    price: '10,000 Naira',
     venue: 'Telegram',
     timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
     format: 'Detailed videos are sent. This course is NOT live',
@@ -411,7 +411,7 @@ export default function Courses() {
                       href={selectedCourse.selarLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors rounded-full"
+                      className="flex items-center justify-center px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors rounded-full"
                     >
                       Buy on Selar
                     </a>
