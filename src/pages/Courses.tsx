@@ -7,107 +7,210 @@ import { useTranslation } from 'react-i18next';
 const COURSES = [
   {
     id: 1,
-    title: 'Draping Online Course',
-    image: 'https://i.imgur.com/lTzK3u5.jpeg',
-    description: 'Discover the art of draping directly on the dress form to create unique, fluid, and sculptural designs.',
-    learnings: ['Preparing the dress form', 'Basic draping principles', 'Creating cowls and twists', 'Transferring drape to paper', 'Avant-garde techniques'],
-    duration: '5 Weeks',
-    level: 'Advanced',
-    price: '₦9,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    title: 'Beginners Course',
+    image: 'https://i.imgur.com/JWQO9Iv.jpeg',
+    price: '6,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'A comprehensive starter course for fashion design.',
+    learnings: [
+      'How to take accurate body measurements for blouse, skirt and dress',
+      'How to draft a basic bodice',
+      'How to draft a basic sleeve',
+      'How to cut and sew a blouse with waist darts and sleeves',
+      'How to draft, cut and sew a pencil skirt',
+      'How to draft, cut and sew a fitted dress with half length',
+      'How to draft, cut and sew an A-line dress',
+      'How to insert a zipper into a garment',
+      'How to insert pockets into a skirt or dress'
+    ],
+    duration: '4 Weeks',
+    level: 'Beginner',
     rating: 4.9,
-    reviews: 89
+    reviews: 124,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 2,
-    title: 'Hip & Butt Padding Online Course',
-    image: 'https://i.imgur.com/YrwoUhG.jpeg',
-    description: 'Learn the secret techniques to creating natural-looking hip and butt padding for enhanced silhouettes.',
-    learnings: ['Anatomy of padding', 'Material selection', 'Drafting padding patterns', 'Seamless integration', 'Creating the perfect illusion'],
-    duration: '2 Weeks',
-    level: 'Advanced',
-    price: '₦7,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.9,
-    reviews: 156
+    title: 'Intermediate course',
+    image: 'https://i.imgur.com/68ZBljU.jpeg',
+    price: '6,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Elevate your skills with advanced techniques.',
+    learnings: [
+      'How to take accurate body measurements',
+      'How to draft a basic bodice & basic sleeve',
+      'How to make a blouse & pencil skirt with lining',
+      'How to cut & sew a 180 degree circle skirt',
+      'How to cut & sew a 360 degree circle skirt',
+      'How to cut & sew a 720 degree peplum top with perfect padding',
+      'How to create box pleats, knife pleats & inverted pleats',
+      'How to cut & sew a gathers skirt',
+      'How to draft, cut & sew a mermaid skirt',
+      'How to draft, cut & sew different types of sleeves including puff/balloon sleeve, flare sleeve & gathers sleeve'
+    ],
+    duration: '4 Weeks',
+    level: 'Intermediate',
+    rating: 4.8,
+    reviews: 98,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 3,
-    title: 'Size Chart Online Course',
-    image: 'https://i.imgur.com/z8FvD96.jpeg',
-    description: 'Learn how to create and use accurate size charts for professional tailoring.',
-    learnings: ['Taking accurate measurements', 'Developing size charts', 'Fitting techniques', 'Pattern adjustment', 'Client management'],
-    duration: '1 Week',
-    level: 'Beginner',
-    price: '₦5,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    title: 'Trouser Course',
+    image: 'https://i.imgur.com/G9S1QWm.jpeg',
+    price: '5,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Master drafting and sewing trousers and jumpsuits.',
+    learnings: [
+      'How to take accurate body measurements for trouser and jumpsuit',
+      'How to draft a palazzo trouser pattern',
+      'How to sew a palazzo trouser with side pockets and back zipper',
+      'How to draft a pencil trouser pattern',
+      'How to sew a pencil trouser with side pockets and a zipper fly',
+      'How to draft a shorts pattern',
+      'How to sew shorts with side pockets',
+      'How to draft a basic bodice and basic sleeve pattern',
+      'How to sew a simple blouse with waist darts and long sleeves for a jumpsuit',
+      'How to draft a trouser specifically for a jumpsuit',
+      'How to sew a perfect fitting jumpsuit'
+    ],
+    duration: '4 Weeks',
+    level: 'Intermediate',
     rating: 5.0,
-    reviews: 42
+    reviews: 215,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 4,
-    title: 'Bustier Online Course',
+    title: 'Bustier Course',
     image: 'https://i.imgur.com/wvnGp4j.jpeg',
-    description: 'Learn to draft and construct flawless bustiers with built-in cups and impeccable support.',
-    learnings: ['Bustier pattern drafting', 'Cup sizing and foam application', 'Underwire insertion', 'Creating sheer panels', 'Attaching to skirts/trousers'],
-    duration: '3 Weeks',
+    price: '7,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Draft and construct flawless bustiers.',
+    learnings: [
+      'How to take accurate body measurements for bustier',
+      'How to draft & sew an armhole princess dart bustier',
+      'How to draft & sew a tube armhole princess dart bustier dress',
+      'How to draft & sew a six pieces top with shoulder princess dart bustier',
+      'How to draft & sew an off shoulder bustier peplum top with sleeves',
+      'How to draft & sew a straight dart bustier dress with yoke',
+      'How to draft & sew a straight dart bustier top with bust caging and under bust corset',
+      'How to perfectly pad and iron your bustier for the best fit',
+      'Tips and tricks for making bustiers for plus'
+    ],
+    duration: '4 Weeks',
     level: 'Intermediate',
-    price: '₦8,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
     rating: 4.8,
-    reviews: 178
+    reviews: 178,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 5,
-    title: 'Intermediate Online Course',
-    image: 'https://i.imgur.com/68ZBljU.jpeg',
-    description: 'Elevate your skills with advanced techniques. Perfect for those who have mastered the basics.',
-    learnings: ['Advanced pattern drafting', 'Complex garment construction', 'Working with delicate fabrics', 'Professional finishing techniques', 'Fitting and alterations'],
-    duration: '6 Weeks',
-    level: 'Intermediate',
-    price: '₦7,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 4.8,
-    reviews: 98
+    title: 'Corset Course',
+    image: 'https://i.imgur.com/3C75nKm.jpeg',
+    price: '5,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Master intricate corset making structure and boning.',
+    learnings: [
+      'How to take accurate body measurements',
+      'How to draft a basic bodice',
+      'How to draft, cut and sew a cupped corset using ready made bra cups',
+      'How to draft, cut and sew a cupped corset by creating your own bra cups',
+      'How to draft, cut and sew a Victorian corset',
+      'How to insert bonings, loops & eyelets',
+      'How to create a basque waistline and join it to a skirt to create a dress',
+      'How to insert yoke into your corset',
+      'Boning and waist snatching techniques'
+    ],
+    duration: '4 Weeks',
+    level: 'Advanced',
+    rating: 5.0,
+    reviews: 342,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 6,
-    title: 'Trouser & Jumpsuit Online Course',
-    image: 'https://i.imgur.com/G9S1QWm.jpeg',
-    description: 'Master the art of drafting and sewing perfect-fitting trousers and jumpsuits.',
-    learnings: ['Trouser block drafting', 'Jumpsuit pattern manipulation', 'Crotch curve perfection', 'Pockets and fly zippers', 'Styling variations'],
-    duration: '3 Weeks',
-    level: 'Intermediate/Advanced',
-    price: '₦6,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
-    rating: 5.0,
-    reviews: 215
+    title: 'Draping Course',
+    image: 'https://i.imgur.com/lTzK3u5.jpeg',
+    price: '8,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Art of draping for unique, fluid designs.',
+    learnings: [
+      'How to drape a basic bodice with underbust dart and side dart using two methods',
+      'How to drape a cowl neckline top',
+      'How to drape a bustier with & without a yoke',
+      'How to drape a cupped corset with & without a yoke',
+      'How to create patterns from a draped piece',
+      'How to neatly finish a draped piece without turning it into a pattern',
+      'How to drape using a masking tape',
+      'How to pad a dress form to any size and shape you want',
+      'Bonus Class: How to drape wrapper illusion fabric (3 methods)'
+    ],
+    duration: '4 Weeks',
+    level: 'Advanced',
+    rating: 4.9,
+    reviews: 89,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 7,
-    title: 'Corset Online Course',
-    image: 'https://i.imgur.com/3C75nKm.jpeg',
-    description: 'Master the intricate art of corset making. Learn structure, boning, and creating the perfect hourglass silhouette.',
-    learnings: ['Corset pattern drafting', 'Types of boning and application', 'Inserting busks and eyelets', 'Lining and finishing', 'Overbust vs Underbust'],
+    title: 'Size Chart Course',
+    image: 'https://i.imgur.com/z8FvD96.jpeg',
+    price: '4,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Create professional and accurate size charts.',
+    learnings: [
+      'How to carry out the research required to develop your size chart',
+      'How to determine the right measurement system to use for your brand',
+      'How to determine your target audience and the measurements required for them',
+      'How to determine the measurements to include in your size chart',
+      'How to get the exact measurement values to include in your size chart'
+    ],
     duration: '4 Weeks',
-    level: 'Advanced',
-    price: '₦6,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    level: 'Beginner',
     rating: 5.0,
-    reviews: 342
+    reviews: 42,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   },
   {
     id: 8,
-    title: 'Beginners Online Course',
-    image: 'https://i.imgur.com/JWQO9Iv.jpeg',
-    description: 'Start your fashion journey with our comprehensive beginners course.',
-    learnings: ['Introduction to sewing machines', 'Basic stitches and seams', 'Understanding fabrics', 'Taking accurate measurements', 'Creating simple garments'],
+    title: 'Hip & Butt Padding Course',
+    image: 'https://i.imgur.com/YrwoUhG.jpeg',
+    price: '6,000 Naira',
+    venue: 'Telegram',
+    timeline: 'You have access to all the course videos when registration is completed. This allows you to learn and practice at your own pace',
+    format: 'Detailed videos are sent. This course is NOT live',
+    description: 'Techniques for natural-looking enhancements.',
+    learnings: [
+      'Accurate measurements for hip & butt padding',
+      'How to draft a pencil skirt for hip & butt padding',
+      'How to draft hip & butt padding',
+      'How to create hip & butt padding using foam, fiber & warden (breast pad)',
+      'How to attach foam padding to a skirt',
+      'How to attach fiber padding to a skirt',
+      'How to attach warden padding to a skirt',
+      'How to create different padding width (medium padding & heavy padding)',
+      'How to sew & finish up your pencil skirt with hip & butt padding (in-seam finishing).'
+    ],
     duration: '4 Weeks',
-    level: 'Beginner',
-    price: '₦7,000',
-    selarLink: 'https://selar.com/m/thesilem?lang=en',
+    level: 'Advanced',
     rating: 4.9,
-    reviews: 124
+    reviews: 156,
+    selarLink: 'https://selar.com/m/thesilem?lang=en'
   }
 ];
 
@@ -247,7 +350,7 @@ export default function Courses() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl rounded-2xl"
+                className="bg-white w-full max-w-5xl h-[80vh] flex relative shadow-2xl rounded-2xl overflow-hidden"
               >
                 <button 
                   onClick={() => setSelectedCourse(null)}
@@ -256,55 +359,50 @@ export default function Courses() {
                   <X className="w-6 h-6" />
                 </button>
 
-                <div className="w-full md:w-1/2 h-64 md:h-auto">
+                {/* Fixed Image Left */}
+                <div className="w-1/3 h-full flex-shrink-0">
                   <img 
                     src={selectedCourse.image} 
                     alt={selectedCourse.title} 
-                    className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
+                    className="w-full h-full object-cover rounded-none"
                     referrerPolicy="no-referrer"
                   />
                 </div>
 
-                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col">
-                  <div className="flex justify-between items-start mb-4">
-                    <h2 className="text-3xl font-bold uppercase tracking-wider">{selectedCourse.title}</h2>
+                {/* Scrollable Details Right */}
+                <div className="w-2/3 h-full overflow-y-auto p-12">
+                  <h2 className="text-3xl font-bold uppercase tracking-wider mb-6">{selectedCourse.title}</h2>
+                  
+                  <div className="space-y-4 text-sm text-gray-600 mb-6">
+                    <p><strong>Timeline:</strong> {selectedCourse.timeline}</p>
+                    <p><strong>Duration:</strong> {selectedCourse.duration}</p>
+                    <p><strong>Level:</strong> {selectedCourse.level}</p>
+                    <p><strong>Rating:</strong> {selectedCourse.rating} ({selectedCourse.reviews} reviews)</p>
+                    <p><strong>Venue:</strong> {selectedCourse.venue}</p>
                   </div>
                   
-                  <div className="flex items-center space-x-6 mb-8 text-sm border-b border-gray-200 pb-6">
-                    <div className="flex items-center space-x-2">
-                      <Clock className="w-5 h-5 text-peach-500" />
-                      <span className="text-gray-600">{selectedCourse.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <BarChart className="w-5 h-5 text-peach-500" />
-                      <span className="text-gray-600">{selectedCourse.level}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Star className="w-5 h-5 text-peach-500 fill-current" />
-                      <span className="font-bold">{selectedCourse.rating}</span>
-                    </div>
-                  </div>
+                  <div className="h-px bg-gray-200 my-6" />
 
-                  <div className="mb-8 flex-grow">
-                    <h3 className="font-bold uppercase tracking-wider mb-3">{t('courses.about')}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      {selectedCourse.description}
-                    </p>
+                  <h3 className="font-bold uppercase tracking-wider mb-3">About the course</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {selectedCourse.description}
+                  </p>
 
-                    <h3 className="font-bold uppercase tracking-wider mb-3">{t('courses.learn')}</h3>
-                    <ul className="space-y-2">
-                      {selectedCourse.learnings.map((learning, index) => (
-                        <li key={index} className="flex items-start space-x-3 text-gray-600">
-                          <span className="text-peach-500 font-bold mt-1">•</span>
-                          <span>{learning}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-auto pt-6 border-t border-gray-200 flex items-center justify-between">
+                  <h3 className="font-bold uppercase tracking-wider mb-3">What You'll Learn</h3>
+                  <ul className="space-y-2 mb-6">
+                    {selectedCourse.learnings.map((learning, index) => (
+                      <li key={index} className="flex items-start space-x-3 text-gray-600">
+                        <span className="text-peach-500 font-bold mt-1">•</span>
+                        <span>{learning}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="h-px bg-gray-200 my-6" />
+                  
+                  <div className="flex items-center justify-between mt-8">
                     <div>
-                      <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">{t('courses.fee')}</p>
+                      <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Course Fee</p>
                       <p className="text-3xl font-bold">{selectedCourse.price}</p>
                     </div>
                     <a 
@@ -313,7 +411,7 @@ export default function Courses() {
                       rel="noopener noreferrer"
                       className="px-8 py-4 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-colors"
                     >
-                      {t('courses.buy')}
+                      Buy on Selar
                     </a>
                   </div>
                 </div>
