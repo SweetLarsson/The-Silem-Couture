@@ -173,13 +173,12 @@ export default function Home() {
       {/* Fashion Design Preview */}
       <section className="py-24">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div className="mb-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-widest uppercase mb-4">{t('home.featured_collection')}</h2>
               <div className="w-24 h-1 bg-peach-500 rounded-full" />
             </div>
-            <div className="hidden md:flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-gray-400 cursor-not-allowed">
-            </div>
+
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -207,12 +206,7 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="mt-8 text-center md:hidden text-gray-400 cursor-not-allowed">
-            <span className="inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-wider">
-              <span>{t('home.view_all_collection')}</span>
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </div>
+
         </div>
       </section>
 
