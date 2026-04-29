@@ -20,17 +20,8 @@
     --foreground: 0 0% 0%;
   }
 
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-  }
-
   body {
     @apply bg-white text-black font-sans antialiased selection:bg-peach-200 selection:text-black;
-  }
-
-  .dark body {
-    @apply bg-black text-white selection:bg-peach-700 selection:text-white;
   }
 
   img:not(.no-fx):not(.no-filter) {
