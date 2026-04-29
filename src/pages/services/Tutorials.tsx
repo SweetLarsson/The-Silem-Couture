@@ -15,17 +15,17 @@ export default function Tutorials() {
 
   return (
     <PageTransition>
-      <section className="pt-32 pb-16 bg-black text-white text-center">
+      <section className="pt-32 pb-16 bg-white text-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">Tutorials</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto mb-6 rounded-full" />
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto font-light">
             A selection of practical, bite-sized YouTube tutorial videos focused on mastering specific sewing and design techniques.
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50 dark:bg-black">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {videos.map((src, index) => (
@@ -35,7 +35,7 @@ export default function Tutorials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="aspect-video bg-gray-100 dark:bg-gray-900 relative group cursor-pointer rounded-3xl overflow-hidden shadow-lg"
+                className="aspect-video bg-gray-100 relative group cursor-pointer rounded-3xl overflow-hidden shadow-lg"
               >
                 <iframe 
                   className="w-full h-full border-0" 
@@ -53,7 +53,7 @@ export default function Tutorials() {
                href={`https://wa.me/message/TE4G3XZ3KAOMM1`} 
                target="_blank" 
                rel="noopener noreferrer"
-               className="inline-block px-12 py-5 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wider hover:bg-peach-500 dark:hover:bg-peach-500 hover:text-white transition-all transform hover:-translate-y-1 rounded-full text-sm shadow-xl"
+               className="inline-block px-12 py-5 bg-black text-white font-bold uppercase tracking-wider hover:bg-peach-500 hover:text-white transition-all transform hover:-translate-y-1 rounded-full text-sm shadow-xl"
              >
                Make a Tutorial Request
              </a>

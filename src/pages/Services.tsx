@@ -33,17 +33,17 @@ const ALL_SERVICES = [
 export default function Services() {
   return (
     <PageTransition>
-      <section className="pt-32 pb-16 bg-black text-white text-center">
+      <section className="pt-32 pb-16 bg-white text-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-6">Our Services</h1>
           <div className="w-24 h-1 bg-peach-500 mx-auto mb-6 rounded-full" />
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto font-light">
             Discover the range of professional fashion and tailoring services we offer.
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-peach-100 dark:bg-gray-900">
+      <section className="py-24 bg-peach-100">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
             {ALL_SERVICES.map((service, index) => (
@@ -53,14 +53,14 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-black p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden"
+                className="bg-white p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden"
               >
                 <Link to={service.path} className="flex flex-col h-full w-full p-10">
-                  <div className="w-16 h-16 mx-auto bg-peach-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-peach-500 group-hover:text-white transition-colors">
+                  <div className="w-16 h-16 mx-auto bg-peach-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-peach-500 group-hover:text-white transition-colors">
                     <service.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold uppercase tracking-wider mb-4">{service.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                 </Link>

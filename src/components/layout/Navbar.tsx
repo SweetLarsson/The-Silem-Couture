@@ -146,7 +146,7 @@ export function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full right-0 mt-4 w-60 bg-white dark:bg-zinc-900 shadow-2xl py-6 px-6 flex flex-col space-y-5 rounded-[2rem] border border-gray-100 dark:border-gray-800 z-50 origin-top-right"
+                  className="absolute top-full right-0 mt-4 w-60 bg-white shadow-2xl py-6 px-6 flex flex-col space-y-5 rounded-[2rem] border border-gray-100 z-50 origin-top-right"
                 >
                   {navLinks.map((link) => (
                     <Link 
@@ -187,7 +187,7 @@ export function Navbar() {
                               <button
                                 key={lang.code}
                                 className={cn(
-                                  "text-left px-5 py-3 text-sm font-medium hover:bg-peach-50 dark:hover:bg-white/5 transition-colors",
+                                  "text-left px-5 py-3 text-sm font-medium hover:bg-peach-50 transition-colors",
                                   i18n.language === lang.code ? "text-peach-600 bg-peach-50/50" : "text-gray-700"
                                 )}
                                 onClick={() => {
