@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Scissors, HeartHandshake, Palette, Video } from 'lucide-react';
+import { Scissors, HeartHandshake, Palette, Video, BookOpen } from 'lucide-react';
 import { PageTransition } from '@/components/ui/PageTransition';
+import { cn } from '@/lib/utils';
 
 const ALL_SERVICES = [
   {
@@ -15,6 +16,12 @@ const ALL_SERVICES = [
     description: 'Stunning, custom-made wedding dresses crafted to make your special day truly unforgettable.',
     icon: HeartHandshake,
     path: '/services/bridals'
+  },
+  {
+    title: 'Online Courses',
+    description: 'Master the art of fashion design with our comprehensive online courses, from beginners to master class.',
+    icon: BookOpen,
+    path: '/courses'
   },
   {
     title: 'Fashion Illustration',
@@ -45,7 +52,7 @@ export default function Services() {
 
       <section className="py-24 bg-peach-100">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {ALL_SERVICES.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -53,7 +60,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden"
+                className={cn(
+                  "bg-white p-0 text-center group hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden flex flex-col h-full",
+                  index >= 3 && ALL_SERVICES.length === 5 ? "lg:col-span-1 lg:first:col-start-1" : ""
+                )}
               >
                 <Link to={service.path} className="flex flex-col h-full w-full p-10">
                   <div className="w-16 h-16 mx-auto bg-peach-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-peach-500 group-hover:text-white transition-colors">
