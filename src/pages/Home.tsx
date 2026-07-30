@@ -186,11 +186,12 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               'https://i.imgur.com/OzR0jYt.jpeg',
-              'https://i.imgur.com/CYd3QYF.jpeg',
-              'https://i.imgur.com/PV8Vg7T.jpeg',
-              'https://i.imgur.com/gyoqSbn.jpeg',
-              'https://i.imgur.com/qm4UqiX.jpeg',
-              'https://i.imgur.com/nyvqwX3.jpeg',
+              'https://i.imgur.com/dB816MY.jpeg',
+              'https://i.imgur.com/Sws4jWI.jpeg',
+              'https://i.imgur.com/VOenLDJ.jpeg',
+              'https://i.imgur.com/wjmZEi6.jpeg',
+              'https://i.imgur.com/W6EW3zQ.jpeg',
+              'https://i.imgur.com/rWckuSY.jpeg',
             ].map((src, index) => (
               <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(src)}>
                 <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4 rounded-2xl">

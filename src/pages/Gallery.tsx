@@ -17,7 +17,12 @@ const GALLERY_IMAGES = [
   'https://i.imgur.com/idSpVoy.jpeg',
   'https://i.imgur.com/aVG4kjH.jpeg',
   'https://i.imgur.com/oZxUBMM.jpeg',
-  'https://i.imgur.com/bgLhKMT.jpeg'
+  'https://i.imgur.com/bgLhKMT.jpeg',
+  'https://i.imgur.com/CYd3QYF.jpeg',
+  'https://i.imgur.com/PV8Vg7T.jpeg',
+  'https://i.imgur.com/gyoqSbn.jpeg',
+  'https://i.imgur.com/qm4UqiX.jpeg',
+  'https://i.imgur.com/nyvqwX3.jpeg'
 ];
 
 export default function Gallery() {
