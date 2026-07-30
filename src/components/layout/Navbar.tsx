@@ -12,7 +12,7 @@ export function Navbar() {
   const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isDarkTop = location.pathname === '/designs' || location.pathname === '/sewing';
+  const isDarkTop = false;
   const { t, i18n } = useTranslation();
 
   const languages = [

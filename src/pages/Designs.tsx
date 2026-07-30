@@ -15,7 +15,12 @@ export default function Designs() {
     'https://i.imgur.com/nBZdrwX.jpeg',
     'https://i.imgur.com/DZejhKa.jpeg',
     'https://i.imgur.com/esqLmo0.jpeg',
-    'https://i.imgur.com/0MKiqY2.jpeg'
+    'https://i.imgur.com/0MKiqY2.jpeg',
+    'https://i.imgur.com/CYd3QYF.jpeg',
+    'https://i.imgur.com/PV8Vg7T.jpeg',
+    'https://i.imgur.com/gyoqSbn.jpeg',
+    'https://i.imgur.com/qm4UqiX.jpeg',
+    'https://i.imgur.com/nyvqwX3.jpeg'
   ];
 
   return (
